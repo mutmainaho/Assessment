@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login page</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello Again! <br />
+            welcome back
+        </h1>
+            <p>sign into your account</p>
+        <form id="validateform">
+                <label for="email" class="brtop">Email Address</label><br />
+                <input
+                  type="text"
+                  name="email"
+                  class="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                /><br />
+                <span class="error-block"></span><br />
+
+                <label for="password" class="brtop">Password</label><br />
+                <input
+                  type="text"
+                  name="password"
+                  class="password"
+                  id="password"
+                  placeholder="Enter your password"
+                /><br />
+                <span class="error-block"></span><br />
+               
+                <div class="info">
+                    <button type="submit" id="btn" >Login</button>
+                    <span> <a href="./signup.html">I'm new here!</a></span>  
+
+                </div>        
+        </form>           
+    </div>
+    <script src="./app.js"></script>
+
+    
+</body>
+</html>
