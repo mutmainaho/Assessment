@@ -3,13 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./board.css">
     <title>Dashboard</title>
 </head>
 <body>
-   <div class="sidenav" id="sidenav" >
-       <p>Dashboard</p>
-   </div> 
-    
+    <div class="container">
+        <div class="sidebar" id="sidebar" >
+            <div class="profile"></div>
+            <ul class="list">
+                <li class="list__item">
+                    <a href="#" class="list__link">Dashboard</a>
+                </li>
+            </ul>
+        </div> 
+        <div class="main">
+            <div class= "row" >
+                <div class="col-sm-8">
+                    <h3>welcome back,Jane!</h3>
+                </div>
+                <div class="col-sm-8">
+                    <button type="submit" id="btn" > Make A Deposit</button>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <p>Deposite Made</p>
+                        <h1>50</h1>
+                    </div>
+                    <div class="col-4">
+                        <p>Aval.Balance</p>
+                        <h1>350k</h1>
+
+                    </div>
+                    <div class="col-4">
+                        <p>Acc.profit</p>
+                        <h1>17.5k</h1>
+                    </div>
+                    <div class="col-4">
+                        <p>sectors</p>
+                        <h1>5</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <p>Annual Deposit Treand</p>
+                    </div>
+                    <div class="col-8">
+                        <p>sector Details</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>

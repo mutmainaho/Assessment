@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size:62.5%;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #707070;
+}
+.container{
+    display: flex;
+    max-height: 100vh;
+    height: 100vh;
+}
+
+.profile{
+    width: 18.3rem;
+    height:18.3rem;
+    border-radius: 50%;
+    background: #E6EBF0;
+    margin-bottom: 6.3rem;
+}
+.list{
+    list-style: none;
+}
+.list__item{
+    
+}
+.sidebar{
+    width: 26.9rem;
+    background: rgba(230, 235, 240, 0.4);
+    height: 100%;
+    padding: 7rem 4.2rem;
+}
+
+.main{
+    flex: 1;
+    height: 100%;
+    background-color: red;
+}
