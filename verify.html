@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./verify.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./verify.css" />
     <title>verification</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Almost there! <br />
-            Verify your account
-        </h1>
-            <p>Enter code sent to ja****oe@gmail.com</p>
-            <form id="requiredfield">
-                <label for="email">Verification Code</label><br />
-                <input
-                  type="text"
-                  name="email"
-                  class="email"
-                  id="verification"
-                  placeholder="Enter verification code"
-                /><br />
-                <span class="error-block error-message"></span><br />
-                <div class="info">
-                    <button type="submit" id="btn" >Verify Account</button>
-                    <span> <a href="">skip</a></span>  
-
-                </div>
-               
-            </form>
+      <h3 class="heading-3">
+        Almost there! <br />
+        Verify your account
+      </h3>
+      <h2 class="heading-2">Enter code sent to ja****oe@gmail.com</h2>
+      <hr class="line" />
+      <form id="requiredfield">
+        <div class="input-container"></div>
+        <label class="brtop" for="email">Verification Code</label><br />
+        <input
+          type="text"
+          name="email"
+          class="email"
+          id="verification"
+          placeholder="Enter verification code"
+        /><br />
+        <span class="error-block error-message"></span><br />
+        <div class="info">
+          <button type="submit" id="btn">Verify Account</button>
+          <span> <a href="">skip</a></span>
+        </div>
+      </form>
     </div>
     <script src="./verify.js"></script>
-</body>
+  </body>
 </html>
