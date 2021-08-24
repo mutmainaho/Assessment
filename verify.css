@@ -1,58 +1,92 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
 }
 body {
-    font-family: "Helvetica Neue",Helvetica,;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-size:large;
-    color: #707070;
-    
+  font-family: "Roboto", sans-serif;
+  color: #707070;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
-h2,p{
-    margin-bottom: 20px;
-    
+.container {
+  max-width: 36.6rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -25.45rem;
+  margin-left: -18.3rem;
+}
+.heading-3 {
+  font-size: 3.5rem;
+  line-height: 4.1rem;
+  color: #847a83;
+}
+.heading-2 {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  margin: 1rem 0;
+  color: #c2bdc4;
+}
+hr.line {
+  border: 0.5px solid #c3c5cc;
+}
+.input-container {
+  margin-bottom: 3.1rem;
+}
+.input-container:first-child {
+  margin-top: 2.6rem;
 }
 input {
-    border-radius: 3px;
-    width: 25em;
-    height: 40px;
-    border: solid 1px #707070;
-    margin-top: 10px;
-    padding: 10px;
-  }
-  .error-block {
-    color: red;
-    
-  }
-  #btn {
-    margin-right: 10px;
-    width: 120px;
-    background-color: black;
-    color: white;
-    height: 35px;
-    border-radius:5px;
-    font-weight: bold;
+  width: 36.6rem;
+  height: 5.5rem;
+  border: 1px solid #a5abbd;
+  box-shadow: 0px 4px 4px rgba(230, 230, 230, 0.25);
+  margin: 0.8rem 0;
+  padding: 1.8rem;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+.brtop {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin-top: 5px;
+  display: inline-block;
+  color: #696668;
+}
+.error-block {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  color: red;
+}
+#btn {
+  background: #0e080d;
+  border-radius: 4px;
+  width: 17.1rem;
+  height: 5.6rem;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+}
 
-  }
-  .info{
-    padding-top: 20px;
-  }
-  a{
-    text-decoration: none;
-    color: #707070;
-    font-weight: bold;
-  }
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+a {
+  text-decoration: none;
+  color: #847a83;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  margin: 1rem;
+}
 
-  @media screen and (max-width: 600px){
-
-    body{
-      font-size:small;
-    }
-    input{
-      width: 15em;}
-    }
