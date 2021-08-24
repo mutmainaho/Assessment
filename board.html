@@ -1,64 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./board.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./board.css" />
     <title>Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="sidebar" id="sidebar" >
-            <div class="profile"></div>
-            <ul class="list">
-                <li class="list__item">
-                    <a href="#" class="list__link">Dashboard</a>
-                </li>
-            </ul>
-        </div> 
-        <div class="main">
-            <div class= "row" >
-                <div class="col-sm-8">
-                    <h3>welcome back,Jane!</h3>
-                </div>
-                <div class="col-sm-8">
-                    <button type="submit" id="btn" > Make A Deposit</button>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <p>Deposite Made</p>
-                        <h1>50</h1>
-                    </div>
-                    <div class="col-4">
-                        <p>Aval.Balance</p>
-                        <h1>350k</h1>
-
-                    </div>
-                    <div class="col-4">
-                        <p>Acc.profit</p>
-                        <h1>17.5k</h1>
-                    </div>
-                    <div class="col-4">
-                        <p>sectors</p>
-                        <h1>5</h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <p>Annual Deposit Treand</p>
-                    </div>
-                    <div class="col-8">
-                        <p>sector Details</p>
-                    </div>
-                </div>
-                
-            </div>
+      <div class="sidebar" id="sidebar">
+        <div class="profile"></div>
+        <ul class="list">
+          <li class="list__item">
+            <a href="#" class="list__link">Dashboard</a>
+          </li>
+        </ul>
+        <button class="btn btn__logout btn--red">Log out</button>
+      </div>
+      <div class="main">
+        <nav class="sm">
+          <span id="burger" class="burger"></span>
+        </nav>
+        <div class="header">
+          <h3 class="heading-3">Welcome back, Jane!</h3>
+          <button type="submit" class="make-dep" id="btn">
+            Make A Deposit
+          </button>
         </div>
+        <div class="card-list">
+          <div class="card-list__item card-list__red">
+            <p>Deposits Made</p>
+            <h1>50</h1>
+          </div>
+          <div class="card-list__item card-list__blue">
+            <p>Aval. Balance</p>
+            <h1>350k</h1>
+          </div>
+          <div class="card-list__item card-list__purple">
+            <p>Acc. Profit</p>
+            <h1>17.5k</h1>
+          </div>
+          <div class="card-list__item card-list__pink">
+            <p>Sectors</p>
+            <h1>5</h1>
+          </div>
+        </div>
+        <section class="middle">
+          <div class="card-1">
+            <p class="heading-3">Annual Deposit Trend</p>
+            <canvas id="lineChart"></canvas>
+          </div>
+          <div class="card-2">
+            <p class="heading-3">sector Details</p>
+            <canvas id="myChart"></canvas>
+          </div>
+        </section>
+        <section class="bottom">
+          <div class="card-1">
+            <p class="heading-3">Transaction History</p>
+            <table border="0" cellspacing="0" cellpadding="0">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Transaction Ref</th>
+                  <th>Transaction Date</th>
+                  <th>Transaction Amount</th>
+                  <th>Status</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>TRX-01-17082021</td>
+                  <td>17th Aug, 2021</td>
+                  <td>NGN 30,000.00</td>
+                  <td><span class="status-success">SUCCESS</span></td>
+                  <td>VIEW DETAILS</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>TRX-10-15082021</td>
+                  <td>15th Aug, 2021</td>
+                  <td>NGN 25,000.00</td>
+                  <td><span class="status-success">SUCCESS</span></td>
+                  <td>VIEW DETAILS</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>TRX-19-12082021</td>
+                  <td>12th Aug, 2021</td>
+                  <td>NGN 30,000.00</td>
+                  <td><span class="status-failed">FAILED</span></td>
+                  <td>VIEW DETAILS</td>
+                  <td><span class="status-success">RETRY</span></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>TRX-80-08082021</td>
+                  <td>8th Aug, 2021</td>
+                  <td>NGN 30,000.00</td>
+                  <td><span class="status-pending">PENDING</span></td>
+                  <td>VIEW DETAILS</td>
+                  <td><span class="status-pending">REQUERY</span></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>TRX-01-17082021</td>
+                  <td>17th Aug, 2021</td>
+                  <td>NGN 30,000.00</td>
+                  <td><span class="status-success">SUCCESS</span></td>
+                  <td>VIEW DETAILS</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>TRX-10-15082021</td>
+                  <td>15th Aug, 2021</td>
+                  <td>NGN 25,000.00</td>
+                  <td><span class="status-success">SUCCESS</span></td>
+                  <td>VIEW DETAILS</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // === include 'setup' then 'config' above ===
+      const data = {
+        datasets: [
+          {
+            label: "My First Dataset",
+            data: [30, 50, 10, 40, 10],
+            backgroundColor: [
+              "#FDEA41",
+              "#FF1212",
+              "#5B2020",
+              "#6DDD45",
+              "#456CD0",
+            ],
+            hoverOffset: 4,
+            cutout: "85%",
+          },
+        ],
+      };
+      const config = {
+        type: "doughnut",
+        data: data,
+      };
+      var myChart = new Chart(document.getElementById("myChart"), config);
 
-</body>
+      const lineData = {
+        labels: ["FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG"],
+        datasets: [
+          {
+            label: "Total Transactions",
+            data: [65, 59, 80, 81, 56, 55, 40],
+            fill: false,
+            borderColor: "rgb(75, 192, 192)",
+            tension: 0.1,
+          },
+        ],
+      };
+      const lineConfig = {
+        type: "line",
+        data: lineData,
+      };
+      var lineChart = new Chart(
+        document.getElementById("lineChart"),
+        lineConfig
+      );
+      document.getElementById("burger").addEventListener("click", function () {
+        document.querySelector("#burger").classList.toggle("open");
+        document.querySelector("#sidebar").classList.toggle("open");
+      });
+    </script>
+  </body>
 </html>
