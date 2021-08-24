@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./signup.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./signup.css" />
     <title>signup page</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Hello! <br />
-            Sign up to get <br/>
-            started
-        </h1>
-        <p>create an account</p>
-        <div class= "row">
-          <div class="col">
-        <form id="form">
-        <form id="form">
-            <label for="fullname">Full Name</label><br />
+      <h3 class="heading-3">
+        Hello! <br />
+        Sign up to get <br />
+        started
+      </h3>
+      <h2 class="heading-2">create an account</h2>
+      <hr class="line" />
+      <form id="form">
+        <div class="row">
+          <div class="input-container">
+            <label class="brtop" for="fullname">Full Name</label><br />
             <input
               type="text"
               name="fullname"
@@ -26,44 +27,50 @@
               placeholder="Enter your full name"
             /><br />
             <span class="error-block"></span><br />
-            <label  class="brtop" for="password">Password</label><br />
-                <input
-                  type="text"
-                  name="password"
-                  class="password"
-                  id="password"
-                  placeholder="Enter your password"
-                /><br />
-                <span class="error-block"></span><br />
-              </div>
-              <div class="col">
-    
-                <label for="email">Email</label><br />
-                <input
-                  type="text"
-                  name="email"
-                  class="email"
-                  id="email"
-                  placeholder="Enter your email address"
-                /><br />
-                <span class="error-block"></span><br />
-                <label class="brtop" for="password"> verify Password</label><br />
-                    <input
-                      type="text"
-                      name=" verify password"
-                      class=" verify password"
-                      id="verifypassword"
-                      placeholder="Enter your password again"
-                    /><br />
-                    <span class="error-block"></span><br />
-                  </div>
-                  </div>
-                  <div class="info">
-            <button type="submit" class="btn "id="btn" > Create Account</button> 
-            <span> <a href="./index.html">I have an account</a></span> 
           </div>
+          <div class="input-container">
+            <label class="brtop" for="password">Password</label><br />
+            <input
+              type="text"
+              name="password"
+              class="password"
+              id="password"
+              placeholder="Enter your password"
+            /><br />
+            <span class="error-block"></span><br />
+          </div>
+        </div>
 
-          <script src="./signup.js"></script>
-
-</body>
+        <div class="row">
+          <div class="input-container">
+            <label class="brtop" for="email">Email</label><br />
+            <input
+              type="text"
+              name="email"
+              class="email"
+              id="email"
+              placeholder="Enter your email address"
+            /><br />
+            <span class="error-block"></span><br />
+          </div>
+          <div class="input-container">
+            <label class="brtop" for="password"> Verify Password</label><br />
+            <input
+              type="text"
+              name=" verify password"
+              class="verify password"
+              id="verifypassword"
+              placeholder="Enter your password again"
+            /><br />
+            <span class="error-block"></span><br />
+          </div>
+        </div>
+        <div class="info">
+          <button type="submit" class="btn" id="btn">Create Account</button>
+          <span> <a href="./index.html">I have an account</a></span>
+        </div>
+      </form>
+    </div>
+    <script src="./signup.js"></script>
+  </body>
 </html>
